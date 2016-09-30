@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<AppFlowDoc>
+    <ApplicationFlow nextObjectId="71" package="flow.subflow.SubPromotions" version="5.0">
+        <FlowGraph>
+            <FlowNode class="com.avaya.sce.callflow.internal.appflow.SymbolicNode" id="68" version="3.1">
+                <Property name="ReferencedNodeID" value="35"/>
+                <Property name="FlowNodeEditPart.WidgetY" value="70"/>
+                <Property name="FlowNodeEditPart.WidgetX" value="672"/>
+            </FlowNode>
+            <FlowNode class="com.avaya.sce.callflow.internal.appflow.SubEntry" id="1" version="3.1">
+                <Property name="Name" value="Begin"/>
+                <Property name="FlowNodeEditPart.WidgetY" value="98"/>
+                <Property name="FlowNodeEditPart.WidgetX" value="38"/>
+                <FlowItem class="com.avaya.sce.callflow.internal.flowitem.SubEntry" id="2" version="1.2">
+                    <ItemProperties/>
+                    <ChildItems>
+                        <FlowItem class="com.avaya.sce.callflow.internal.flowitem.GoTo" id="3" version="1.2">
+                            <ItemProperties>
+                                <Property name="Name" value="Start"/>
+                                <Property name="LinkedNodeID" value="35"/>
+                            </ItemProperties>
+                            <ChildItems/>
+                        </FlowItem>
+                    </ChildItems>
+                </FlowItem>
+            </FlowNode>
+            <FlowNode class="com.avaya.sce.callflow.internal.appflow.Form" id="35" version="3.1">
+                <Property name="Name" value="promotionsPromptAndCollect"/>
+                <Property name="FlowNodeEditPart.WidgetIcon" value="promptandcollect.gif"/>
+                <Property name="FlowNodeEditPart.WidgetY" value="184"/>
+                <Property name="FlowNodeEditPart.WidgetX" value="159"/>
+                <FlowItem class="com.avaya.sce.callflow.internal.flowitem.Form" id="36" version="1.2">
+                    <ItemProperties/>
+                    <ChildItems>
+                        <FlowItem class="com.avaya.sce.callflow.internal.flowitem.Trace" id="37" version="1.2">
+                            <ItemProperties>
+                                <Property name="trace.text" value="promotions p&amp;c"/>
+                                <Property name="trace.varId" value="serviceValue"/>
+                            </ItemProperties>
+                            <ChildItems/>
+                        </FlowItem>
+                        <FlowItem class="com.avaya.sce.callflow.internal.flowitem.Field" id="38" version="1.2">
+                            <ItemProperties>
+                                <Property name="Name" value="promotionsPromptAndCollectCopy"/>
+                                <Property name="name.bound" value="true"/>
+                            </ItemProperties>
+                            <ChildItems>
+                                <FlowItem class="com.avaya.sce.callflow.internal.flowitem.Prompt" id="39" version="1.2">
+                                    <ItemProperties>
+                                        <Property name="Name" value="prPromotions"/>
+                                    </ItemProperties>
+                                    <ChildItems/>
+                                </FlowItem>
+                                <FlowItem class="com.avaya.sce.callflow.internal.flowitem.Grammar" id="40" version="1.2">
+                                    <ItemProperties>
+                                        <Property name="Name" value="grPromotions"/>
+                                    </ItemProperties>
+                                    <ChildItems/>
+                                </FlowItem>
+                                <FlowItem class="com.avaya.sce.callflow.internal.flowitem.NoInput" id="41" version="1.2">
+                                    <ItemProperties/>
+                                    <ChildItems>
+                                        <FlowItem class="com.avaya.sce.callflow.internal.flowitem.Prompt" id="42" version="1.2">
+                                            <ItemProperties>
+                                                <Property name="Name" value="prPromotionsNoInput"/>
+                                            </ItemProperties>
+                                            <ChildItems/>
+                                        </FlowItem>
+                                        <FlowItem class="com.avaya.sce.callflow.internal.flowitem.GoTo" id="43" version="1.2">
+                                            <ItemProperties>
+                                                <Property name="LinkedNodeID" value="68"/>
+                                            </ItemProperties>
+                                            <ChildItems/>
+                                        </FlowItem>
+                                    </ChildItems>
+                                </FlowItem>
+                                <FlowItem class="com.avaya.sce.callflow.internal.flowitem.NoMatch" id="44" version="1.2">
+                                    <ItemProperties/>
+                                    <ChildItems>
+                                        <FlowItem class="com.avaya.sce.callflow.internal.flowitem.GoTo" id="45" version="1.2">
+                                            <ItemProperties>
+                                                <Property name="LinkedNodeID" value="5"/>
+                                            </ItemProperties>
+                                            <ChildItems/>
+                                        </FlowItem>
+                                    </ChildItems>
+                                </FlowItem>
+                            </ChildItems>
+                        </FlowItem>
+                        <FlowItem class="com.avaya.sce.callflow.internal.flowitem.Submit" id="46" version="1.2">
+                            <ItemProperties>
+                                <Property name="LinkedNodeID" value="21"/>
+                            </ItemProperties>
+                            <ChildItems/>
+                        </FlowItem>
+                    </ChildItems>
+                </FlowItem>
+            </FlowNode>
+            <FlowNode class="com.avaya.sce.callflow.internal.appflow.Form" id="16" version="3.1">
+                <Property name="Name" value="promotionsNoMatchAnnounce"/>
+                <Property name="FlowNodeEditPart.WidgetIcon" value="announce.gif"/>
+                <Property name="FlowNodeEditPart.WidgetY" value="212"/>
+                <Property name="FlowNodeEditPart.WidgetX" value="922"/>
+                <FlowItem class="com.avaya.sce.callflow.internal.flowitem.Form" id="17" version="1.2">
+                    <ItemProperties/>
+                    <ChildItems>
+                        <FlowItem class="com.avaya.sce.callflow.internal.flowitem.Trace" id="18" version="1.2">
+                            <ItemProperties>
+                                <Property name="trace.text" value="promotions no match prompt"/>
+                                <Property name="trace.varId" value="merchant4Value"/>
+                            </ItemProperties>
+                            <ChildItems/>
+                        </FlowItem>
+                        <FlowItem class="com.avaya.sce.callflow.internal.flowitem.Prompt" id="19" version="1.2">
+                            <ItemProperties>
+                                <Property name="Name" value="prPromotionsNoMatch"/>
+                            </ItemProperties>
+                            <ChildItems/>
+                        </FlowItem>
+                        <FlowItem class="com.avaya.sce.callflow.internal.flowitem.Submit" id="20" version="1.2">
+                            <ItemProperties>
+                                <Property name="LinkedNodeID" value="70"/>
+                            </ItemProperties>
+                            <ChildItems/>
+                        </FlowItem>
+                    </ChildItems>
+                </FlowItem>
+            </FlowNode>
+            <FlowNode class="com.avaya.sce.callflow.internal.appflow.SymbolicNode" id="70" version="3.1">
+                <Property name="ReferencedNodeID" value="35"/>
+                <Property name="FlowNodeEditPart.WidgetY" value="206"/>
+                <Property name="FlowNodeEditPart.WidgetX" value="1195"/>
+            </FlowNode>
+            <FlowNode class="com.avaya.sce.callflow.internal.appflow.Data" id="21" version="3.1">
+                <Property name="Name" value="promotionsData"/>
+                <Property name="FlowNodeEditPart.WidgetY" value="363"/>
+                <Property name="FlowNodeEditPart.WidgetX" value="810"/>
+                <FlowItem class="com.avaya.sce.callflow.internal.flowitem.Data" id="22" version="1.2">
+                    <ItemProperties/>
+                    <ChildItems>
+                        <FlowItem class="com.avaya.sce.callflow.internal.flowitem.Assignment" id="23" version="1.2">
+                            <ItemProperties>
+                                <Property name="sourceVarId" value="promotionsPromptAndCollectCopy"/>
+                                <Property name="type" value="assign"/>
+                                <Property name="destVarId" value="promotionsValue"/>
+                                <Property name="sourceFieldId" value="value"/>
+                            </ItemProperties>
+                            <ChildItems/>
+                        </FlowItem>
+                        <FlowItem class="com.avaya.sce.callflow.internal.flowitem.Trace" id="24" version="1.2">
+                            <ItemProperties>
+                                <Property name="trace.text" value="promotions value :"/>
+                                <Property name="trace.varId" value="promotionsValue"/>
+                            </ItemProperties>
+                            <ChildItems/>
+                        </FlowItem>
+                        <FlowItem class="com.avaya.sce.callflow.internal.flowitem.IfCondition" id="25" version="1.2">
+                            <ItemProperties>
+                                <Property name="RightConstOperand" value="*"/>
+                                <Property name="Operator" value="Equal"/>
+                                <Property name="LeftOperandID" value="promotionsValue"/>
+                            </ItemProperties>
+                            <ChildItems>
+                                <FlowItem class="com.avaya.sce.callflow.internal.flowitem.Trace" id="26" version="1.2">
+                                    <ItemProperties>
+                                        <Property name="trace.text" value="promotions value * selected"/>
+                                        <Property name="trace.varId" value="promotionsValue"/>
+                                    </ItemProperties>
+                                    <ChildItems/>
+                                </FlowItem>
+                                <FlowItem class="com.avaya.sce.callflow.internal.flowitem.Next" id="27" version="1.2">
+                                    <ItemProperties>
+                                        <Property name="Name" value="press *"/>
+                                        <Property name="LinkedNodeID" value="4"/>
+                                    </ItemProperties>
+                                    <ChildItems/>
+                                </FlowItem>
+                            </ChildItems>
+                        </FlowItem>
+                        <FlowItem class="com.avaya.sce.callflow.internal.flowitem.IfCondition" id="28" version="1.2">
+                            <ItemProperties>
+                                <Property name="RightConstOperand" value="#"/>
+                                <Property name="Operator" value="Equal"/>
+                                <Property name="LeftOperandID" value="promotionsValue"/>
+                            </ItemProperties>
+                            <ChildItems>
+                                <FlowItem class="com.avaya.sce.callflow.internal.flowitem.Trace" id="29" version="1.2">
+                                    <ItemProperties>
+                                        <Property name="trace.text" value="promotions value # selected"/>
+                                        <Property name="trace.varId" value="promotionsValue"/>
+                                    </ItemProperties>
+                                    <ChildItems/>
+                                </FlowItem>
+                                <FlowItem class="com.avaya.sce.callflow.internal.flowitem.Next" id="30" version="1.2">
+                                    <ItemProperties>
+                                        <Property name="Name" value="press #"/>
+                                        <Property name="LinkedNodeID" value="62"/>
+                                    </ItemProperties>
+                                    <ChildItems/>
+                                </FlowItem>
+                            </ChildItems>
+                        </FlowItem>
+                        <FlowItem class="com.avaya.sce.callflow.internal.flowitem.IfCondition" id="31" version="1.2">
+                            <ItemProperties>
+                                <Property name="RightConstOperand" value="9"/>
+                                <Property name="Operator" value="Equal"/>
+                                <Property name="LeftOperandID" value="promotionsValue"/>
+                            </ItemProperties>
+                            <ChildItems>
+                                <FlowItem class="com.avaya.sce.callflow.internal.flowitem.Trace" id="32" version="1.2">
+                                    <ItemProperties>
+                                        <Property name="trace.text" value="promotions value 9 selected"/>
+                                        <Property name="trace.varId" value="promotionsValue"/>
+                                    </ItemProperties>
+                                    <ChildItems/>
+                                </FlowItem>
+                                <FlowItem class="com.avaya.sce.callflow.internal.flowitem.Next" id="33" version="1.2">
+                                    <ItemProperties>
+                                        <Property name="Name" value="press 9"/>
+                                        <Property name="LinkedNodeID" value="61"/>
+                                    </ItemProperties>
+                                    <ChildItems/>
+                                </FlowItem>
+                            </ChildItems>
+                        </FlowItem>
+                        <FlowItem class="com.avaya.sce.callflow.internal.flowitem.Assignment" id="34" version="1.2">
+                            <ItemProperties>
+                                <Property name="sourceVarId" value="checkMaxTries"/>
+                                <Property name="destFieldId" value="noOfTries"/>
+                                <Property name="type" value="assign"/>
+                                <Property name="destVarId" value="checkMaxTries"/>
+                                <Property name="sourceFieldId" value="initialValue"/>
+                            </ItemProperties>
+                            <ChildItems/>
+                        </FlowItem>
+                    </ChildItems>
+                </FlowItem>
+            </FlowNode>
+            <FlowNode class="com.avaya.sce.callflow.internal.appflow.SymbolicNode" id="4" version="3.1">
+                <Property name="ReferencedNodeID" value="35"/>
+                <Property name="FlowNodeEditPart.WidgetY" value="303"/>
+                <Property name="FlowNodeEditPart.WidgetX" value="1091"/>
+            </FlowNode>
+            <FlowNode class="com.avaya.sce.callflow.internal.appflow.Form" id="55" version="3.1">
+                <Property name="Name" value="maxTriesExceedAnnounce"/>
+                <Property name="FlowNodeEditPart.WidgetIcon" value="announce.gif"/>
+                <Property name="FlowNodeEditPart.WidgetY" value="127"/>
+                <Property name="FlowNodeEditPart.WidgetX" value="940"/>
+                <FlowItem class="com.avaya.sce.callflow.internal.flowitem.Form" id="56" version="1.2">
+                    <ItemProperties/>
+                    <ChildItems>
+                        <FlowItem class="com.avaya.sce.callflow.internal.flowitem.Trace" id="57" version="1.2">
+                            <ItemProperties>
+                                <Property name="trace.text" value="language select max tries exceed prompt"/>
+                            </ItemProperties>
+                            <ChildItems/>
+                        </FlowItem>
+                        <FlowItem class="com.avaya.sce.callflow.internal.flowitem.Prompt" id="58" version="1.2">
+                            <ItemProperties>
+                                <Property name="Name" value="prMaxTriesExceed"/>
+                            </ItemProperties>
+                            <ChildItems/>
+                        </FlowItem>
+                        <FlowItem class="com.avaya.sce.callflow.internal.flowitem.Submit" id="59" version="1.2">
+                            <ItemProperties>
+                                <Property name="LinkedNodeID" value="66"/>
+                            </ItemProperties>
+                            <ChildItems/>
+                        </FlowItem>
+                    </ChildItems>
+                </FlowItem>
+            </FlowNode>
+            <FlowNode class="com.avaya.sce.callflow.internal.appflow.Data" id="5" version="3.1">
+                <Property name="Name" value="promotionsExtraData"/>
+                <Property name="FlowNodeEditPart.WidgetY" value="152"/>
+                <Property name="FlowNodeEditPart.WidgetX" value="675"/>
+                <FlowItem class="com.avaya.sce.callflow.internal.flowitem.Data" id="6" version="1.2">
+                    <ItemProperties/>
+                    <ChildItems>
+                        <FlowItem class="com.avaya.sce.callflow.internal.flowitem.Trace" id="7" version="1.2">
+                            <ItemProperties>
+                                <Property name="trace.text" value="promotions value no match"/>
+                                <Property name="trace.varId" value="checkMaxTries"/>
+                                <Property name="trace.fieldId" value="noOfTries"/>
+                            </ItemProperties>
+                            <ChildItems/>
+                        </FlowItem>
+                        <FlowItem class="com.avaya.sce.callflow.internal.flowitem.Assignment" id="8" version="1.2">
+                            <ItemProperties>
+                                <Property name="destFieldId" value="noOfTries"/>
+                                <Property name="type" value="increment"/>
+                                <Property name="destVarId" value="checkMaxTries"/>
+                            </ItemProperties>
+                            <ChildItems/>
+                        </FlowItem>
+                        <FlowItem class="com.avaya.sce.callflow.internal.flowitem.IfCondition" id="9" version="1.2">
+                            <ItemProperties>
+                                <Property name="RightConstOperand" value="3"/>
+                                <Property name="Operator" value="Equal"/>
+                                <Property name="LeftOperandFieldID" value="noOfTries"/>
+                                <Property name="LeftOperandID" value="checkMaxTries"/>
+                            </ItemProperties>
+                            <ChildItems>
+                                <FlowItem class="com.avaya.sce.callflow.internal.flowitem.Trace" id="10" version="1.2">
+                                    <ItemProperties>
+                                        <Property name="trace.text" value="promotions max tries exceed"/>
+                                        <Property name="trace.varId" value="checkMaxTries"/>
+                                        <Property name="trace.fieldId" value="noOfTries"/>
+                                    </ItemProperties>
+                                    <ChildItems/>
+                                </FlowItem>
+                                <FlowItem class="com.avaya.sce.callflow.internal.flowitem.Next" id="11" version="1.2">
+                                    <ItemProperties>
+                                        <Property name="Name" value="exceed"/>
+                                        <Property name="LinkedNodeID" value="55"/>
+                                    </ItemProperties>
+                                    <ChildItems/>
+                                </FlowItem>
+                            </ChildItems>
+                        </FlowItem>
+                        <FlowItem class="com.avaya.sce.callflow.internal.flowitem.ElseCondition" id="12" version="1.2">
+                            <ItemProperties/>
+                            <ChildItems>
+                                <FlowItem class="com.avaya.sce.callflow.internal.flowitem.Trace" id="13" version="1.2">
+                                    <ItemProperties>
+                                        <Property name="trace.text" value="promotions max tries not exceed"/>
+                                        <Property name="trace.varId" value="checkMaxTries"/>
+                                        <Property name="trace.fieldId" value="noOfTries"/>
+                                    </ItemProperties>
+                                    <ChildItems/>
+                                </FlowItem>
+                                <FlowItem class="com.avaya.sce.callflow.internal.flowitem.Next" id="14" version="1.2">
+                                    <ItemProperties>
+                                        <Property name="Name" value="not exceed"/>
+                                        <Property name="LinkedNodeID" value="16"/>
+                                    </ItemProperties>
+                                    <ChildItems/>
+                                </FlowItem>
+                            </ChildItems>
+                        </FlowItem>
+                    </ChildItems>
+                </FlowItem>
+            </FlowNode>
+            <FlowNode class="com.avaya.sce.callflow.internal.appflow.SymbolicNode" id="66" version="3.1">
+                <Property name="ReferencedNodeID" value="61"/>
+                <Property name="FlowNodeEditPart.WidgetY" value="134"/>
+                <Property name="FlowNodeEditPart.WidgetX" value="1240"/>
+            </FlowNode>
+            <FlowNode class="com.avaya.sce.callflow.internal.appflow.SubReturn" id="62" version="3.1">
+                <Property name="Name" value="MainMenu"/>
+                <Property name="FlowNodeEditPart.WidgetY" value="376"/>
+                <Property name="FlowNodeEditPart.WidgetX" value="1101"/>
+            </FlowNode>
+            <FlowNode class="com.avaya.sce.callflow.internal.appflow.SubReturn" id="61" version="3.1">
+                <Property name="Name" value="Exit"/>
+                <Property name="FlowNodeEditPart.WidgetY" value="436"/>
+                <Property name="FlowNodeEditPart.WidgetX" value="1107"/>
+            </FlowNode>
+            <NodeConnection id="48" version="1.2">
+                <SourceNode id="35"/>
+                <TargetNode id="5"/>
+                <Property name="Connection.SourceObjectID" value="45"/>
+                <Property name="Connection.TargetObjectID" value="5"/>
+            </NodeConnection>
+            <NodeConnection id="49" version="1.2">
+                <SourceNode id="35"/>
+                <TargetNode id="21"/>
+                <Property name="Connection.SourceObjectID" value="46"/>
+                <Property name="Connection.TargetObjectID" value="21"/>
+                <Bendpoint x="628" y="202"/>
+            </NodeConnection>
+            <NodeConnection id="51" version="1.2">
+                <SourceNode id="5"/>
+                <TargetNode id="16"/>
+                <Property name="Connection.SourceObjectID" value="14"/>
+                <Property name="Connection.TargetObjectID" value="16"/>
+            </NodeConnection>
+            <NodeConnection id="53" version="1.2">
+                <SourceNode id="21"/>
+                <TargetNode id="4"/>
+                <Property name="Connection.SourceObjectID" value="27"/>
+                <Property name="Connection.TargetObjectID" value="4"/>
+                <Bendpoint x="1006" y="262"/>
+                <Bendpoint x="845" y="106"/>
+                <Bendpoint x="880" y="106"/>
+            </NodeConnection>
+            <NodeConnection id="54" version="1.2">
+                <SourceNode id="1"/>
+                <TargetNode id="35"/>
+                <Property name="Connection.SourceObjectID" value="3"/>
+                <Property name="Connection.TargetObjectID" value="35"/>
+            </NodeConnection>
+            <NodeConnection id="60" version="1.2">
+                <SourceNode id="5"/>
+                <TargetNode id="55"/>
+                <Property name="Connection.SourceObjectID" value="11"/>
+                <Property name="Connection.TargetObjectID" value="55"/>
+            </NodeConnection>
+            <NodeConnection id="64" version="1.2">
+                <SourceNode id="21"/>
+                <TargetNode id="61"/>
+                <Property name="Connection.SourceObjectID" value="33"/>
+                <Property name="Connection.TargetObjectID" value="61"/>
+            </NodeConnection>
+            <NodeConnection id="65" version="1.2">
+                <SourceNode id="21"/>
+                <TargetNode id="62"/>
+                <Property name="Connection.SourceObjectID" value="30"/>
+                <Property name="Connection.TargetObjectID" value="62"/>
+            </NodeConnection>
+            <NodeConnection id="67" version="1.2">
+                <SourceNode id="55"/>
+                <TargetNode id="66"/>
+                <Property name="Connection.SourceObjectID" value="59"/>
+                <Property name="Connection.TargetObjectID" value="66"/>
+            </NodeConnection>
+            <NodeConnection id="69" version="1.2">
+                <SourceNode id="35"/>
+                <TargetNode id="68"/>
+                <Property name="Connection.SourceObjectID" value="43"/>
+                <Property name="Connection.TargetObjectID" value="68"/>
+                <Bendpoint x="587" y="159"/>
+                <Bendpoint x="500" y="122"/>
+                <Bendpoint x="418" y="88"/>
+            </NodeConnection>
+            <NodeConnection id="71" version="1.2">
+                <SourceNode id="16"/>
+                <TargetNode id="70"/>
+                <Property name="Connection.SourceObjectID" value="20"/>
+                <Property name="Connection.TargetObjectID" value="70"/>
+            </NodeConnection>
+        </FlowGraph>
+        <ProjectEventTypes/>
+    </ApplicationFlow>
+</AppFlowDoc>

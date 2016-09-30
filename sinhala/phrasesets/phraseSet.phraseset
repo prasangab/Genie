@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<phraseset audiolocation="internal" version="1.0">
+    <phrase version="1.0">
+        <displayname>geniewelcome</displayname>
+        <talent/>
+        <phrasetext/>
+        <basetext/>
+        <searchkeywords/>
+        <comments/>
+        <audiofile>geniewelcome.wav</audiofile>
+    </phrase>
+    <phrase version="1.0">
+        <displayname>agent</displayname>
+        <talent/>
+        <phrasetext/>
+        <basetext/>
+        <searchkeywords/>
+        <comments/>
+        <audiofile>agent.wav</audiofile>
+    </phrase>
+    <phrase version="1.0">
+        <displayname>productinfo</displayname>
+        <talent/>
+        <phrasetext/>
+        <basetext/>
+        <searchkeywords/>
+        <comments/>
+        <audiofile>productinfo.wav</audiofile>
+    </phrase>
+    <phrase version="1.0">
+        <displayname>merchants</displayname>
+        <talent/>
+        <phrasetext/>
+        <basetext/>
+        <searchkeywords/>
+        <comments/>
+        <audiofile>merchants.wav</audiofile>
+    </phrase>
+    <phrase version="1.0">
+        <displayname>promotions</displayname>
+        <talent/>
+        <phrasetext/>
+        <basetext/>
+        <searchkeywords/>
+        <comments/>
+        <audiofile>promotions.wav</audiofile>
+    </phrase>
+    <phrase version="1.0">
+        <displayname>agentassistance</displayname>
+        <talent/>
+        <phrasetext/>
+        <basetext/>
+        <searchkeywords/>
+        <comments/>
+        <audiofile>agentassistance.wav</audiofile>
+    </phrase>
+    <phrase version="1.0">
+        <displayname>lostphone</displayname>
+        <talent/>
+        <phrasetext/>
+        <basetext/>
+        <searchkeywords/>
+        <comments/>
+        <audiofile>lostphone.wav</audiofile>
+    </phrase>
+    <phrase version="1.0">
+        <displayname>pinfo</displayname>
+        <talent/>
+        <phrasetext/>
+        <basetext/>
+        <searchkeywords/>
+        <comments/>
+        <audiofile>pinfo.wav</audiofile>
+    </phrase>
+    <phrase version="1.0">
+        <displayname>pressstar</displayname>
+        <talent/>
+        <phrasetext/>
+        <basetext/>
+        <searchkeywords/>
+        <comments/>
+        <audiofile>pressstar.wav</audiofile>
+    </phrase>
+    <phrase version="1.0">
+        <displayname>presshash</displayname>
+        <talent/>
+        <phrasetext/>
+        <basetext/>
+        <searchkeywords/>
+        <comments/>
+        <audiofile>presshash.wav</audiofile>
+    </phrase>
+    <phrase version="1.0">
+        <displayname>press9</displayname>
+        <talent/>
+        <phrasetext/>
+        <basetext/>
+        <searchkeywords/>
+        <comments/>
+        <audiofile>press9.wav</audiofile>
+    </phrase>
+    <phrase version="1.0">
+        <displayname>genieservice</displayname>
+        <talent/>
+        <phrasetext/>
+        <basetext/>
+        <searchkeywords/>
+        <comments/>
+        <audiofile>genieservice.wav</audiofile>
+    </phrase>
+    <phrase version="1.0">
+        <displayname>geniepayment</displayname>
+        <talent/>
+        <phrasetext/>
+        <basetext/>
+        <searchkeywords/>
+        <comments/>
+        <audiofile>geniepayment.wav</audiofile>
+    </phrase>
+    <phrase version="1.0">
+        <displayname>geniem1</displayname>
+        <talent/>
+        <phrasetext/>
+        <basetext/>
+        <searchkeywords/>
+        <comments/>
+        <audiofile>geniem1.wav</audiofile>
+    </phrase>
+    <phrase version="1.0">
+        <displayname>geniem2</displayname>
+        <talent/>
+        <phrasetext/>
+        <basetext/>
+        <searchkeywords/>
+        <comments/>
+        <audiofile>geniem2.wav</audiofile>
+    </phrase>
+    <phrase version="1.0">
+        <displayname>geniem3</displayname>
+        <talent/>
+        <phrasetext/>
+        <basetext/>
+        <searchkeywords/>
+        <comments/>
+        <audiofile>geniem3.wav</audiofile>
+    </phrase>
+    <phrase version="1.0">
+        <displayname>geniem4</displayname>
+        <talent/>
+        <phrasetext/>
+        <basetext/>
+        <searchkeywords/>
+        <comments/>
+        <audiofile>geniem4.wav</audiofile>
+    </phrase>
+    <phrase version="1.0">
+        <displayname>promotionsinfo</displayname>
+        <talent/>
+        <phrasetext/>
+        <basetext/>
+        <searchkeywords/>
+        <comments/>
+        <audiofile>promotionsinfo.wav</audiofile>
+    </phrase>
+    <phrase version="1.0">
+        <displayname>geniem1info</displayname>
+        <talent/>
+        <phrasetext/>
+        <basetext/>
+        <searchkeywords/>
+        <comments/>
+        <audiofile>geniem1info.wav</audiofile>
+    </phrase>
+    <phrase version="1.0">
+        <displayname>geniem2info</displayname>
+        <talent/>
+        <phrasetext/>
+        <basetext/>
+        <searchkeywords/>
+        <comments/>
+        <audiofile>geniem2info.wav</audiofile>
+    </phrase>
+    <phrase version="1.0">
+        <displayname>geniem3info</displayname>
+        <talent/>
+        <phrasetext/>
+        <basetext/>
+        <searchkeywords/>
+        <comments/>
+        <audiofile>geniem3info.wav</audiofile>
+    </phrase>
+    <phrase version="1.0">
+        <displayname>geniem4info1</displayname>
+        <talent/>
+        <phrasetext/>
+        <basetext/>
+        <searchkeywords/>
+        <comments/>
+        <audiofile>geniem4info1.wav</audiofile>
+    </phrase>
+    <phrase version="1.0">
+        <displayname>geniem4info2</displayname>
+        <talent/>
+        <phrasetext/>
+        <basetext/>
+        <searchkeywords/>
+        <comments/>
+        <audiofile>geniem4info2.wav</audiofile>
+    </phrase>
+    <phrase version="1.0">
+        <displayname>bayleaf</displayname>
+        <talent/>
+        <phrasetext/>
+        <basetext/>
+        <searchkeywords/>
+        <comments/>
+        <audiofile>bayleaf.wav</audiofile>
+    </phrase>
+    <phrase version="1.0">
+        <displayname>casac</displayname>
+        <talent/>
+        <phrasetext/>
+        <basetext/>
+        <searchkeywords/>
+        <comments/>
+        <audiofile>casac.wav</audiofile>
+    </phrase>
+    <phrase version="1.0">
+        <displayname>casam</displayname>
+        <talent/>
+        <phrasetext/>
+        <basetext/>
+        <searchkeywords/>
+        <comments/>
+        <audiofile>casam.wav</audiofile>
+    </phrase>
+    <phrase version="1.0">
+        <displayname>commons</displayname>
+        <talent/>
+        <phrasetext/>
+        <basetext/>
+        <searchkeywords/>
+        <comments/>
+        <audiofile>commons.wav</audiofile>
+    </phrase>
+    <phrase version="1.0">
+        <displayname>cottoncollection</displayname>
+        <talent/>
+        <phrasetext/>
+        <basetext/>
+        <searchkeywords/>
+        <comments/>
+        <audiofile>cottoncollection.wav</audiofile>
+    </phrase>
+    <phrase version="1.0">
+        <displayname>curve</displayname>
+        <talent/>
+        <phrasetext/>
+        <basetext/>
+        <searchkeywords/>
+        <comments/>
+        <audiofile>curve.wav</audiofile>
+    </phrase>
+    <phrase version="1.0">
+        <displayname>elogic</displayname>
+        <talent/>
+        <phrasetext/>
+        <basetext/>
+        <searchkeywords/>
+        <comments/>
+        <audiofile>elogic.wav</audiofile>
+    </phrase>
+    <phrase version="1.0">
+        <displayname>harpospizza</displayname>
+        <talent/>
+        <phrasetext/>
+        <basetext/>
+        <searchkeywords/>
+        <comments/>
+        <audiofile>harpospizza.wav</audiofile>
+    </phrase>
+    <phrase version="1.0">
+        <displayname>parkstreetmews</displayname>
+        <talent/>
+        <phrasetext/>
+        <basetext/>
+        <searchkeywords/>
+        <comments/>
+        <audiofile>parkstreetmews.wav</audiofile>
+    </phrase>
+    <phrase version="1.0">
+        <displayname>pizzahut</displayname>
+        <talent/>
+        <phrasetext/>
+        <basetext/>
+        <searchkeywords/>
+        <comments/>
+        <audiofile>pizzahut.wav</audiofile>
+    </phrase>
+    <phrase version="1.0">
+        <displayname>yamu</displayname>
+        <talent/>
+        <phrasetext/>
+        <basetext/>
+        <searchkeywords/>
+        <comments/>
+        <audiofile>yamu.wav</audiofile>
+    </phrase>
+    <phrase version="1.0">
+        <displayname>starclub</displayname>
+        <talent/>
+        <phrasetext/>
+        <basetext/>
+        <searchkeywords/>
+        <comments/>
+        <audiofile>starclub.wav</audiofile>
+    </phrase>
+    <phrase version="1.0">
+        <displayname>supersavings</displayname>
+        <talent/>
+        <phrasetext/>
+        <basetext/>
+        <searchkeywords/>
+        <comments/>
+        <audiofile>supersavings.wav</audiofile>
+    </phrase>
+    <phrase version="1.0">
+        <displayname>selectlang</displayname>
+        <talent/>
+        <phrasetext/>
+        <basetext/>
+        <searchkeywords/>
+        <comments/>
+        <audiofile>selectlang.wav</audiofile>
+    </phrase>
+    <phrase version="1.0">
+        <displayname>noInput</displayname>
+        <talent/>
+        <phrasetext/>
+        <basetext/>
+        <searchkeywords/>
+        <comments/>
+        <audiofile>noInput.wav</audiofile>
+    </phrase>
+    <phrase version="1.0">
+        <displayname>noMatch</displayname>
+        <talent/>
+        <phrasetext/>
+        <basetext/>
+        <searchkeywords/>
+        <comments/>
+        <audiofile>noMatch.wav</audiofile>
+    </phrase>
+    <phrase version="1.0">
+        <displayname>exceedmaxtries</displayname>
+        <talent/>
+        <phrasetext/>
+        <basetext/>
+        <searchkeywords/>
+        <comments/>
+        <audiofile>exceedmaxtries.wav</audiofile>
+    </phrase>
+    <phrase version="1.0">
+        <displayname>thanksforcalling</displayname>
+        <talent/>
+        <phrasetext/>
+        <basetext/>
+        <searchkeywords/>
+        <comments/>
+        <audiofile>thanksforcalling.wav</audiofile>
+    </phrase>
+</phraseset>

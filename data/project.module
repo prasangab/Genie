@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module category="" descriptorversion="1.0" entrypoint="GenieServices/Start" frameworkversion="05.01.11" iconlarge="icons/defaultapplicationlg.gif" iconsmall="icons/defaultapplicationsm.gif" modifyInputs="false" modifyOutputs="false" provider="" version="1.0.0" webname="GenieServices">
+    <description/>
+    <language name="english" root="en-us"/>
+    <language name="sinhala" root="en-us"/>
+    <language name="tamil" root="en-us"/>
+    <dependencies/>
+</module>

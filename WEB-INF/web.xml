@@ -1,0 +1,632 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
+This XML descriptor is automatically generated and managed by the
+application development environment.  While manual updates to this 
+file may be preserved, it is best to manage this file through the application development environment tool.
+
+Copyright 2004 Avaya Inc.
+--><!DOCTYPE web-app PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN" "http://java.sun.com/dtd/web-app_2_3.dtd">
+<web-app id="WebApp_ID">
+    <context-param>
+        <param-name>sage.startlanguage</param-name>
+        <param-value>english</param-value>
+        <description>The starting language for the application.</description>
+    </context-param>
+    <context-param>
+        <param-name>sage.ic.throwexceptions</param-name>
+        <param-value>true</param-value>
+        <description>IC Throw Runtime Exception on Error{true|false}</description>
+    </context-param>
+    <context-param>
+        <param-name>sage.cti.autoinvoke.callinfo</param-name>
+        <param-value>true</param-value>
+        <description>CTI Auto invoke CallInfo upon app start{true|false}</description>
+    </context-param>
+    <context-param>
+        <param-name>runtime-ASR</param-name>
+        <param-value>Desktop Microsoft Speech SAPI</param-value>
+        <description>Runtime ASR {SRGS-Literals|SRGS-SISR|Nuance OSR|IBM|...}</description>
+    </context-param>
+    <context-param>
+        <param-name>runtime-SSML</param-name>
+        <param-value>true</param-value>
+        <description>Runtime SSML Generation {true|false} - "true" enables SSML generation, "false" disables.</description>
+    </context-param>
+    <context-param>
+        <param-name>runtime-Platform</param-name>
+        <param-value>Desktop</param-value>
+        <description>Runtime Platform {Desktop|Voice Portal|Other|IR|MPS}</description>
+    </context-param>
+    <context-param>
+        <param-name>runtime-VXML-Compatibility</param-name>
+        <param-value>2.1</param-value>
+        <description>3.0 Uses VXML 3.0, 2.1 Allows VXML 2.1 extensions, 2.0 Uses VXML 2.0 Only</description>
+    </context-param>
+    <context-param>
+        <param-name>runtime-DTMF-Native</param-name>
+        <param-value>LOCAL_SRGS_LITERALS</param-value>
+        <description>(NATIVE|LOCAL_SRGS_SISR|LOCAL_SRGS_LITERALS, NATIVE means DTMF Grammars are in native asr format.</description>
+    </context-param>
+    <context-param>
+        <param-name>grammar-caching</param-name>
+        <param-value>none</param-value>
+        <description>Grammar caching mode, none=no caching, default=system default or property setting</description>
+    </context-param>
+    <servlet id="avayadefaultdisconnecthandler-servlet">
+        <servlet-name>AvayaDefaultDisconnectHandler</servlet-name>
+        <servlet-class>com.avaya.sce.runtime.DefaultDisconnect</servlet-class>
+    </servlet>
+    <servlet id="avayadefaultexithandler-servlet">
+        <servlet-name>AvayaDefaultExitHandler</servlet-name>
+        <servlet-class>com.avaya.sce.runtime.DefaultExit</servlet-class>
+    </servlet>
+    <servlet id="avayasessiontermination-servlet">
+        <servlet-name>AvayaSessionTerminationServlet</servlet-name>
+        <servlet-class>com.avaya.sce.runtime.AvayaSessionTerminationServlet</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_main_1">
+        <servlet-name>AppRoot</servlet-name>
+        <servlet-class>flow.AppRoot</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_main_18">
+        <servlet-name>languageSelectPromptAndCollect</servlet-name>
+        <servlet-class>flow.languageSelectPromptAndCollect</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_main_13">
+        <servlet-name>welcomeGenieServices</servlet-name>
+        <servlet-class>flow.welcomeGenieServices</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_main_0">
+        <servlet-name>Start</servlet-name>
+        <servlet-class>flow.Start</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_main_29">
+        <servlet-name>serviceSelectPromptAndCollect</servlet-name>
+        <servlet-class>flow.serviceSelectPromptAndCollect</servlet-class>
+    </servlet>
+    
+    
+    
+    
+    
+    
+    <servlet id="SAGE-callflow-servlet_SubMerchants_1">
+        <servlet-name>SubMerchants-Begin</servlet-name>
+        <servlet-class>flow.subflow.SubMerchants.Begin</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_SubMerchants_4">
+        <servlet-name>SubMerchants-MainMenu</servlet-name>
+        <servlet-class>flow.subflow.SubMerchants.MainMenu</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_SubMerchants_6">
+        <servlet-name>SubMerchants-Exit</servlet-name>
+        <servlet-class>flow.subflow.SubMerchants.Exit</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_SubMerchants_7">
+        <servlet-name>SubMerchants-merchantsData</servlet-name>
+        <servlet-class>flow.subflow.SubMerchants.merchantsData</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_main_54">
+        <servlet-name>langData</servlet-name>
+        <servlet-class>flow.langData</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_main_66">
+        <servlet-name>SubMerchants</servlet-name>
+        <servlet-class>flow.SubMerchants</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_main_72">
+        <servlet-name>Exit</servlet-name>
+        <servlet-class>flow.Exit</servlet-class>
+    </servlet>
+    
+    <servlet id="SAGE-callflow-servlet_main_75">
+        <servlet-name>Discoonect</servlet-name>
+        <servlet-class>flow.Discoonect</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_main_101">
+        <servlet-name>serviceSelectData</servlet-name>
+        <servlet-class>flow.serviceSelectData</servlet-class>
+    </servlet>
+    
+    
+    <servlet id="SAGE-callflow-servlet_main_146">
+        <servlet-name>agentAssistanceAnnounce</servlet-name>
+        <servlet-class>flow.agentAssistanceAnnounce</servlet-class>
+    </servlet>
+    
+    <servlet id="SAGE-callflow-servlet_SubMerchants_15">
+        <servlet-name>SubMerchants-merchantsPromptAndCollect</servlet-name>
+        <servlet-class>flow.subflow.SubMerchants.merchantsPromptAndCollect</servlet-class>
+    </servlet>
+    
+    
+    
+    
+    
+    
+    <servlet id="SAGE-callflow-servlet_SubMerchants_48">
+        <servlet-name>SubMerchants-merchant2PromptAndCollect</servlet-name>
+        <servlet-class>flow.subflow.SubMerchants.merchant2PromptAndCollect</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_SubMerchants_68">
+        <servlet-name>SubMerchants-merchant4PromptAndCollect</servlet-name>
+        <servlet-class>flow.subflow.SubMerchants.merchant4PromptAndCollect</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_SubMerchants_38">
+        <servlet-name>SubMerchants-merchant1PromptAndCollect</servlet-name>
+        <servlet-class>flow.subflow.SubMerchants.merchant1PromptAndCollect</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_SubMerchants_58">
+        <servlet-name>SubMerchants-merchant3PromptAndCollect</servlet-name>
+        <servlet-class>flow.subflow.SubMerchants.merchant3PromptAndCollect</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_SubMerchants_86">
+        <servlet-name>SubMerchants-merchant1Data</servlet-name>
+        <servlet-class>flow.subflow.SubMerchants.merchant1Data</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_SubMerchants_92">
+        <servlet-name>SubMerchants-merchant2Data</servlet-name>
+        <servlet-class>flow.subflow.SubMerchants.merchant2Data</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_SubMerchants_102">
+        <servlet-name>SubMerchants-merchant3Data</servlet-name>
+        <servlet-class>flow.subflow.SubMerchants.merchant3Data</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_SubMerchants_110">
+        <servlet-name>SubMerchants-merchant4Data</servlet-name>
+        <servlet-class>flow.subflow.SubMerchants.merchant4Data</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_main_254">
+        <servlet-name>agentTransfer</servlet-name>
+        <servlet-class>flow.agentTransfer</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_main_259">
+        <servlet-name>userData</servlet-name>
+        <servlet-class>flow.userData</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_main_279">
+        <servlet-name>endData</servlet-name>
+        <servlet-class>flow.endData</servlet-class>
+    </servlet>
+    
+    <servlet id="SAGE-callflow-servlet_main_336">
+        <servlet-name>selectLangExtraData</servlet-name>
+        <servlet-class>flow.selectLangExtraData</servlet-class>
+    </servlet>
+    
+    <servlet id="SAGE-callflow-servlet_main_359">
+        <servlet-name>noMatchAnnounce</servlet-name>
+        <servlet-class>flow.noMatchAnnounce</servlet-class>
+    </servlet>
+    
+    
+    <servlet id="SAGE-callflow-servlet_main_384">
+        <servlet-name>serviceExtraData</servlet-name>
+        <servlet-class>flow.serviceExtraData</servlet-class>
+    </servlet>
+    
+    <servlet id="SAGE-callflow-servlet_main_401">
+        <servlet-name>serviceNoMatchAnnounce</servlet-name>
+        <servlet-class>flow.serviceNoMatchAnnounce</servlet-class>
+    </servlet>
+    
+    
+    
+    <servlet id="SAGE-callflow-servlet_SubMerchants_164">
+        <servlet-name>SubMerchants-merchantsExtraData</servlet-name>
+        <servlet-class>flow.subflow.SubMerchants.merchantsExtraData</servlet-class>
+    </servlet>
+    
+    
+    
+    
+    
+    
+    <servlet id="SAGE-callflow-servlet_SubMerchants_191">
+        <servlet-name>SubMerchants-merchant1ExtraData</servlet-name>
+        <servlet-class>flow.subflow.SubMerchants.merchant1ExtraData</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_SubMerchants_204">
+        <servlet-name>SubMerchants-merchant1NoMatchAnnounce</servlet-name>
+        <servlet-class>flow.subflow.SubMerchants.merchant1NoMatchAnnounce</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_SubMerchants_209">
+        <servlet-name>SubMerchants-maxTriesExceedAnnounce</servlet-name>
+        <servlet-class>flow.subflow.SubMerchants.maxTriesExceedAnnounce</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_SubMerchants_227">
+        <servlet-name>SubMerchants-merchantNoMatchAnnounce</servlet-name>
+        <servlet-class>flow.subflow.SubMerchants.merchantNoMatchAnnounce</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_SubMerchants_238">
+        <servlet-name>SubMerchants-merchant2ExtraData</servlet-name>
+        <servlet-class>flow.subflow.SubMerchants.merchant2ExtraData</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_SubMerchants_249">
+        <servlet-name>SubMerchants-merchant2NoMatchAnnounce</servlet-name>
+        <servlet-class>flow.subflow.SubMerchants.merchant2NoMatchAnnounce</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_SubMerchants_260">
+        <servlet-name>SubMerchants-merchant3ExtraData</servlet-name>
+        <servlet-class>flow.subflow.SubMerchants.merchant3ExtraData</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_SubMerchants_271">
+        <servlet-name>SubMerchants-merchant3NoMatchAnnounce</servlet-name>
+        <servlet-class>flow.subflow.SubMerchants.merchant3NoMatchAnnounce</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_SubMerchants_281">
+        <servlet-name>SubMerchants-merchant4ExtraData</servlet-name>
+        <servlet-class>flow.subflow.SubMerchants.merchant4ExtraData</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_SubMerchants_292">
+        <servlet-name>SubMerchants-merchant4NoMatchAnnounce</servlet-name>
+        <servlet-class>flow.subflow.SubMerchants.merchant4NoMatchAnnounce</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_SubProductInfo_69">
+        <servlet-name>SubProductInfo-productInformationPromptAndCollect</servlet-name>
+        <servlet-class>flow.subflow.SubProductInfo.productInformationPromptAndCollect</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_SubProductInfo_1">
+        <servlet-name>SubProductInfo-Begin</servlet-name>
+        <servlet-class>flow.subflow.SubProductInfo.Begin</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_SubProductInfo_64">
+        <servlet-name>SubProductInfo-maxTriesExceedAnnounce</servlet-name>
+        <servlet-class>flow.subflow.SubProductInfo.maxTriesExceedAnnounce</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_SubProductInfo_36">
+        <servlet-name>SubProductInfo-productInfoExtraData</servlet-name>
+        <servlet-class>flow.subflow.SubProductInfo.productInfoExtraData</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_SubProductInfo_59">
+        <servlet-name>SubProductInfo-productInfoNoMatchAnnounce</servlet-name>
+        <servlet-class>flow.subflow.SubProductInfo.productInfoNoMatchAnnounce</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_SubProductInfo_43">
+        <servlet-name>SubProductInfo-productInfoData</servlet-name>
+        <servlet-class>flow.subflow.SubProductInfo.productInfoData</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_SubProductInfo_91">
+        <servlet-name>SubProductInfo-MainMenu</servlet-name>
+        <servlet-class>flow.subflow.SubProductInfo.MainMenu</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_SubProductInfo_534">
+        <servlet-name>SubProductInfo-Exit</servlet-name>
+        <servlet-class>flow.subflow.SubProductInfo.Exit</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_main_569">
+        <servlet-name>SubProductinfo</servlet-name>
+        <servlet-class>flow.SubProductinfo</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_main_576">
+        <servlet-name>maxTriesExceedAnnounce</servlet-name>
+        <servlet-class>flow.maxTriesExceedAnnounce</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_SubPromotions_16">
+        <servlet-name>SubPromotions-promotionsNoMatchAnnounce</servlet-name>
+        <servlet-class>flow.subflow.SubPromotions.promotionsNoMatchAnnounce</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_SubPromotions_35">
+        <servlet-name>SubPromotions-promotionsPromptAndCollect</servlet-name>
+        <servlet-class>flow.subflow.SubPromotions.promotionsPromptAndCollect</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_SubPromotions_1">
+        <servlet-name>SubPromotions-Begin</servlet-name>
+        <servlet-class>flow.subflow.SubPromotions.Begin</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_SubPromotions_55">
+        <servlet-name>SubPromotions-maxTriesExceedAnnounce</servlet-name>
+        <servlet-class>flow.subflow.SubPromotions.maxTriesExceedAnnounce</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_SubPromotions_21">
+        <servlet-name>SubPromotions-promotionsData</servlet-name>
+        <servlet-class>flow.subflow.SubPromotions.promotionsData</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_SubPromotions_5">
+        <servlet-name>SubPromotions-promotionsExtraData</servlet-name>
+        <servlet-class>flow.subflow.SubPromotions.promotionsExtraData</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_SubPromotions_62">
+        <servlet-name>SubPromotions-MainMenu</servlet-name>
+        <servlet-class>flow.subflow.SubPromotions.MainMenu</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_SubPromotions_61">
+        <servlet-name>SubPromotions-Exit</servlet-name>
+        <servlet-class>flow.subflow.SubPromotions.Exit</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_main_587">
+        <servlet-name>SubPromotions</servlet-name>
+        <servlet-class>flow.SubPromotions</servlet-class>
+    </servlet>
+    <servlet id="SAGE-callflow-servlet_main_615">
+        <servlet-name>agentTransferVDNData</servlet-name>
+        <servlet-class>flow.agentTransferVDNData</servlet-class>
+    </servlet>
+    <servlet-mapping id="avayadefaultdisconnecthandler-servletmapping">
+        <servlet-name>AvayaDefaultDisconnectHandler</servlet-name>
+        <url-pattern>/AvayaDefaultDisconnectHandler</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="avayadefaultexithandler-servletmapping">
+        <servlet-name>AvayaDefaultExitHandler</servlet-name>
+        <url-pattern>/AvayaDefaultExitHandler</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="avayasessiontermination-servletmapping">
+        <servlet-name>AvayaSessionTerminationServlet</servlet-name>
+        <url-pattern>/AvayaSessionTerminationServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_main_1">
+        <servlet-name>AppRoot</servlet-name>
+        <url-pattern>/AppRoot</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_main_18">
+        <servlet-name>languageSelectPromptAndCollect</servlet-name>
+        <url-pattern>/languageSelectPromptAndCollect</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_main_13">
+        <servlet-name>welcomeGenieServices</servlet-name>
+        <url-pattern>/welcomeGenieServices</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_main_0">
+        <servlet-name>Start</servlet-name>
+        <url-pattern>/Start</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_main_29">
+        <servlet-name>serviceSelectPromptAndCollect</servlet-name>
+        <url-pattern>/serviceSelectPromptAndCollect</url-pattern>
+    </servlet-mapping>
+    
+    
+    
+    
+    <servlet-mapping id="SAGE-callflow-servletmapping_SubMerchants_1">
+        <servlet-name>SubMerchants-Begin</servlet-name>
+        <url-pattern>/SubMerchants-Begin</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_SubMerchants_4">
+        <servlet-name>SubMerchants-MainMenu</servlet-name>
+        <url-pattern>/SubMerchants-MainMenu</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_SubMerchants_6">
+        <servlet-name>SubMerchants-Exit</servlet-name>
+        <url-pattern>/SubMerchants-Exit</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_SubMerchants_7">
+        <servlet-name>SubMerchants-merchantsData</servlet-name>
+        <url-pattern>/SubMerchants-merchantsData</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_main_54">
+        <servlet-name>langData</servlet-name>
+        <url-pattern>/langData</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_main_66">
+        <servlet-name>SubMerchants</servlet-name>
+        <url-pattern>/SubMerchants</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_main_72">
+        <servlet-name>Exit</servlet-name>
+        <url-pattern>/Exit</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping id="SAGE-callflow-servletmapping_main_75">
+        <servlet-name>Discoonect</servlet-name>
+        <url-pattern>/Discoonect</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_main_101">
+        <servlet-name>serviceSelectData</servlet-name>
+        <url-pattern>/serviceSelectData</url-pattern>
+    </servlet-mapping>
+    
+    
+    <servlet-mapping id="SAGE-callflow-servletmapping_main_146">
+        <servlet-name>agentAssistanceAnnounce</servlet-name>
+        <url-pattern>/agentAssistanceAnnounce</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping id="SAGE-callflow-servletmapping_SubMerchants_15">
+        <servlet-name>SubMerchants-merchantsPromptAndCollect</servlet-name>
+        <url-pattern>/SubMerchants-merchantsPromptAndCollect</url-pattern>
+    </servlet-mapping>
+    
+    
+    
+    <servlet-mapping id="SAGE-callflow-servletmapping_SubMerchants_48">
+        <servlet-name>SubMerchants-merchant2PromptAndCollect</servlet-name>
+        <url-pattern>/SubMerchants-merchant2PromptAndCollect</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_SubMerchants_68">
+        <servlet-name>SubMerchants-merchant4PromptAndCollect</servlet-name>
+        <url-pattern>/SubMerchants-merchant4PromptAndCollect</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_SubMerchants_38">
+        <servlet-name>SubMerchants-merchant1PromptAndCollect</servlet-name>
+        <url-pattern>/SubMerchants-merchant1PromptAndCollect</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_SubMerchants_58">
+        <servlet-name>SubMerchants-merchant3PromptAndCollect</servlet-name>
+        <url-pattern>/SubMerchants-merchant3PromptAndCollect</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_SubMerchants_86">
+        <servlet-name>SubMerchants-merchant1Data</servlet-name>
+        <url-pattern>/SubMerchants-merchant1Data</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_SubMerchants_92">
+        <servlet-name>SubMerchants-merchant2Data</servlet-name>
+        <url-pattern>/SubMerchants-merchant2Data</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_SubMerchants_102">
+        <servlet-name>SubMerchants-merchant3Data</servlet-name>
+        <url-pattern>/SubMerchants-merchant3Data</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_SubMerchants_110">
+        <servlet-name>SubMerchants-merchant4Data</servlet-name>
+        <url-pattern>/SubMerchants-merchant4Data</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_main_254">
+        <servlet-name>agentTransfer</servlet-name>
+        <url-pattern>/agentTransfer</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_main_259">
+        <servlet-name>userData</servlet-name>
+        <url-pattern>/userData</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_main_279">
+        <servlet-name>endData</servlet-name>
+        <url-pattern>/endData</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_main_336">
+        <servlet-name>selectLangExtraData</servlet-name>
+        <url-pattern>/selectLangExtraData</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping id="SAGE-callflow-servletmapping_main_359">
+        <servlet-name>noMatchAnnounce</servlet-name>
+        <url-pattern>/noMatchAnnounce</url-pattern>
+    </servlet-mapping>
+    
+    
+    <servlet-mapping id="SAGE-callflow-servletmapping_main_384">
+        <servlet-name>serviceExtraData</servlet-name>
+        <url-pattern>/serviceExtraData</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping id="SAGE-callflow-servletmapping_main_401">
+        <servlet-name>serviceNoMatchAnnounce</servlet-name>
+        <url-pattern>/serviceNoMatchAnnounce</url-pattern>
+    </servlet-mapping>
+    
+    
+    
+    <servlet-mapping id="SAGE-callflow-servletmapping_SubMerchants_164">
+        <servlet-name>SubMerchants-merchantsExtraData</servlet-name>
+        <url-pattern>/SubMerchants-merchantsExtraData</url-pattern>
+    </servlet-mapping>
+    
+    
+    
+    
+    
+    <servlet-mapping id="SAGE-callflow-servletmapping_SubMerchants_191">
+        <servlet-name>SubMerchants-merchant1ExtraData</servlet-name>
+        <url-pattern>/SubMerchants-merchant1ExtraData</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_SubMerchants_204">
+        <servlet-name>SubMerchants-merchant1NoMatchAnnounce</servlet-name>
+        <url-pattern>/SubMerchants-merchant1NoMatchAnnounce</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_SubMerchants_209">
+        <servlet-name>SubMerchants-maxTriesExceedAnnounce</servlet-name>
+        <url-pattern>/SubMerchants-maxTriesExceedAnnounce</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_SubMerchants_227">
+        <servlet-name>SubMerchants-merchantNoMatchAnnounce</servlet-name>
+        <url-pattern>/SubMerchants-merchantNoMatchAnnounce</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_SubMerchants_238">
+        <servlet-name>SubMerchants-merchant2ExtraData</servlet-name>
+        <url-pattern>/SubMerchants-merchant2ExtraData</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_SubMerchants_249">
+        <servlet-name>SubMerchants-merchant2NoMatchAnnounce</servlet-name>
+        <url-pattern>/SubMerchants-merchant2NoMatchAnnounce</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_SubMerchants_260">
+        <servlet-name>SubMerchants-merchant3ExtraData</servlet-name>
+        <url-pattern>/SubMerchants-merchant3ExtraData</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_SubMerchants_271">
+        <servlet-name>SubMerchants-merchant3NoMatchAnnounce</servlet-name>
+        <url-pattern>/SubMerchants-merchant3NoMatchAnnounce</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_SubMerchants_281">
+        <servlet-name>SubMerchants-merchant4ExtraData</servlet-name>
+        <url-pattern>/SubMerchants-merchant4ExtraData</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_SubMerchants_292">
+        <servlet-name>SubMerchants-merchant4NoMatchAnnounce</servlet-name>
+        <url-pattern>/SubMerchants-merchant4NoMatchAnnounce</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_SubProductInfo_69">
+        <servlet-name>SubProductInfo-productInformationPromptAndCollect</servlet-name>
+        <url-pattern>/SubProductInfo-productInformationPromptAndCollect</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_SubProductInfo_1">
+        <servlet-name>SubProductInfo-Begin</servlet-name>
+        <url-pattern>/SubProductInfo-Begin</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_SubProductInfo_64">
+        <servlet-name>SubProductInfo-maxTriesExceedAnnounce</servlet-name>
+        <url-pattern>/SubProductInfo-maxTriesExceedAnnounce</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_SubProductInfo_36">
+        <servlet-name>SubProductInfo-productInfoExtraData</servlet-name>
+        <url-pattern>/SubProductInfo-productInfoExtraData</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_SubProductInfo_59">
+        <servlet-name>SubProductInfo-productInfoNoMatchAnnounce</servlet-name>
+        <url-pattern>/SubProductInfo-productInfoNoMatchAnnounce</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_SubProductInfo_43">
+        <servlet-name>SubProductInfo-productInfoData</servlet-name>
+        <url-pattern>/SubProductInfo-productInfoData</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_SubProductInfo_91">
+        <servlet-name>SubProductInfo-MainMenu</servlet-name>
+        <url-pattern>/SubProductInfo-MainMenu</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_SubProductInfo_534">
+        <servlet-name>SubProductInfo-Exit</servlet-name>
+        <url-pattern>/SubProductInfo-Exit</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_main_569">
+        <servlet-name>SubProductinfo</servlet-name>
+        <url-pattern>/SubProductinfo</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_main_576">
+        <servlet-name>maxTriesExceedAnnounce</servlet-name>
+        <url-pattern>/maxTriesExceedAnnounce</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_SubPromotions_16">
+        <servlet-name>SubPromotions-promotionsNoMatchAnnounce</servlet-name>
+        <url-pattern>/SubPromotions-promotionsNoMatchAnnounce</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_SubPromotions_35">
+        <servlet-name>SubPromotions-promotionsPromptAndCollect</servlet-name>
+        <url-pattern>/SubPromotions-promotionsPromptAndCollect</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_SubPromotions_1">
+        <servlet-name>SubPromotions-Begin</servlet-name>
+        <url-pattern>/SubPromotions-Begin</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_SubPromotions_55">
+        <servlet-name>SubPromotions-maxTriesExceedAnnounce</servlet-name>
+        <url-pattern>/SubPromotions-maxTriesExceedAnnounce</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_SubPromotions_21">
+        <servlet-name>SubPromotions-promotionsData</servlet-name>
+        <url-pattern>/SubPromotions-promotionsData</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_SubPromotions_5">
+        <servlet-name>SubPromotions-promotionsExtraData</servlet-name>
+        <url-pattern>/SubPromotions-promotionsExtraData</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_SubPromotions_62">
+        <servlet-name>SubPromotions-MainMenu</servlet-name>
+        <url-pattern>/SubPromotions-MainMenu</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_SubPromotions_61">
+        <servlet-name>SubPromotions-Exit</servlet-name>
+        <url-pattern>/SubPromotions-Exit</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_main_587">
+        <servlet-name>SubPromotions</servlet-name>
+        <url-pattern>/SubPromotions</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="SAGE-callflow-servletmapping_main_615">
+        <servlet-name>agentTransferVDNData</servlet-name>
+        <url-pattern>/agentTransferVDNData</url-pattern>
+    </servlet-mapping>
+    
+    
+    
+    
+</web-app>
